@@ -1,0 +1,18 @@
+JPA = API en JAVA
+
+JPA basé sur ORM Object relation model
+On fait des formules CRUD
+
+Couche de persistance snas ORM :
+    -> Framework : Choses bien écrits pour avancé bien plus vite.
+
+ORM c'est quoi ?
+
+JAVA         |     BdD
+Class       ->     Table
+Attribut    ->    Colonne
+Objet       ->     Enregistrement
+
+
+Plus on utilise des frameworks plus on a de la config à faire
+Moins au utilise de frameworks (plus on code), moins il y aura de config à faire
