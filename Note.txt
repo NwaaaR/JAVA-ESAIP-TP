@@ -1,4 +1,4 @@
-JPA = API en JAVA
+JPA = API en JAVA  -> Framework
 
 JPA basé sur ORM Object relation model
 On fait des formules CRUD
@@ -16,3 +16,22 @@ Objet       ->     Enregistrement
 
 Plus on utilise des frameworks plus on a de la config à faire
 Moins au utilise de frameworks (plus on code), moins il y aura de config à faire
+
+
+IaaS -> Infrastructure as a Service
+PaaS -> Platform as a Service
+SaaS -> Software as a Service
+FaaS -> Fonction as a Service
+
+
+-----------
+Pour le TP T2, nous allons reprendre la même bdd que le T1, db_biblio, mais cette fois-ci nous allons éxécuter le script etc.
+Enfaite, on va juste reprendre le TP1 en global et continuer, pour faire le tp2.
+1)
+DROP TABLE IF EXISTS LIVRE ;
+CREATE TABLE LIVRE (ID INT(10) NOT NULL AUTO_INCREMENT PRIMARY KEY, TITRE
+VARCHAR(255) NOT NULL, AUTEUR VARCHAR(50) NOT NULL);
+INSERT INTO LIVRE VALUES (1, 'Vingt mille lieues sous les mers', 'Jules Verne');
+INSERT INTO LIVRE VALUES (2, 'Germinal', 'Emile Zola');
+INSERT INTO LIVRE VALUES (3, 'Guerre et paix', 'Léon Tolstoï');
+INSERT INTO LIVRE VALUES (4, 'Apprendre à parler aux animaux', 'Gaston Pouet');
