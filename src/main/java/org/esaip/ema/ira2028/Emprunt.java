@@ -6,6 +6,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Set;
 @Entity
+@Table(name = "EMPRUNT")
 public class Emprunt {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) // Pour le AUTO_INCREMENT de MySQL
@@ -18,7 +19,7 @@ public class Emprunt {
     private LocalDateTime dateFin;
 
     @Column(name="DELAI")
-    private LocalDateTime delai;
+    private Integer delai;
 
     @JoinColumn(name="ID_CLIENT")
     @ManyToOne
@@ -31,4 +32,13 @@ public class Emprunt {
             inverseJoinColumns = @JoinColumn(name="ID_LIV",referencedColumnName = "ID")
     )
     private Set<Livre> livres;
+
+    public Emprunt() {}
+
+    public Integer getId() { return id; }
+    public LocalDateTime getDateDebut() { return dateDebut; }
+    public LocalDateTime getDateFin() { return dateFin; }
+    public Integer getDelai() { return delai; }
+    public Client getClient() { return client; }
+    public Set<Livre> getLivres() { return livres; }
 }

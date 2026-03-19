@@ -47,7 +47,7 @@ public class Livre {
         tx.begin();
         Livre l5=em.find(Livre.class, 5);
         if(l5!=null){
-            l5.setTitres("Je Suis Olivier Lavergne.");
+            l5.setTitres("Du plaisir dans la cuisine.");
             l5.setAuteur("Oulouvier de La Vergne");
             System.out.println("Livre d'ID : " + l5.getId() +"à été modif");
         }
