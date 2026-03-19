@@ -3,6 +3,7 @@ package org.esaip.ema.ira2028;
 import jakarta.persistence.*; // + simple, on import tout
 
 import java.util.List;
+import java.util.Set;
 
 @Entity
 public class Livre {
@@ -15,6 +16,9 @@ public class Livre {
 
     @Column(name="AUTEUR")
     private String auteur;
+
+    @ManyToMany(mappedBy = "livres")
+    private Set<Emprunt> emprunts;
 
     // Constructeur vide [OBLIGATOIRE]
     public Livre(){}
