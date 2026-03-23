@@ -22,4 +22,30 @@
 
       </properties>
   </persistence-unit>
+
+    <persistence-unit name="banque">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>org.esaip.ema.ira2028.banque.Banque</class>
+        <class>org.esaip.ema.ira2028.banque.Client</class>
+        <class>org.esaip.ema.ira2028.banque.Compte</class>
+        <class>org.esaip.ema.ira2028.banque.LivretA</class>
+        <class>org.esaip.ema.ira2028.banque.AssuranceVie</class>
+        <class>org.esaip.ema.ira2028.banque.Operation</class>
+        <class>org.esaip.ema.ira2028.banque.Virement</class>
+
+        <properties>
+            <property name="hibernate.archive.autodetection" value=""/>
+            <property name="jakarta.persistence.schema-generation.database.action" value="drop-and-create"/>
+            <!--Affichage du sql généré (on remettra en False plutard) -->
+            <property name="hibernate.show_sql"   value="false"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <!--Connexion à la BDD -->
+            <property name="jakarta.persistence.jdbc.url"      value="jdbc:mariadb://localhost:3306/banque"/>
+            <property name="jakarta.persistence.jdbc.user"     value="root"/>
+            <property name="jakarta.persistence.jdbc.password" value="root"/>
+
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+
+        </properties>
+    </persistence-unit>
 </persistence>
