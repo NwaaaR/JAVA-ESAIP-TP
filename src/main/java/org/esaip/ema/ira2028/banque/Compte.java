@@ -1,6 +1,8 @@
 package org.esaip.ema.ira2028.banque;
 
 import jakarta.persistence.*;
+
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -22,10 +24,10 @@ public class Compte {
     private Banque banque;
 
     @ManyToMany(mappedBy = "comptes")
-    private List<Client> clients;
+    private List<Client> clients = new ArrayList<>();
 
     @OneToMany(mappedBy = "compte", cascade = CascadeType.ALL)
-    private List<Operation> operations;
+    private List<Operation> operations = new ArrayList<>();
 
     public Compte() {}
 
